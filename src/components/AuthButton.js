@@ -21,7 +21,7 @@ const mapStateToProps = state => ({
   isLoggedIn: state.auth.isLoggedIn,
 });
 const mapDispatchToProps = dispatch => ({
-  logout: dispatch({ type: 'Logout' }),
+  logout: () => dispatch({ type: 'Logout' }),
   loginScreen: () =>
     dispatch(NavigationActions.navigate({ routeName: 'Login' })),
 });
