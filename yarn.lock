@@ -54,6 +54,34 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@types/prop-types@^15.5.2":
+  version "15.5.2"
+  resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.2.tgz#3c6b8dceb2906cc87fe4358e809f9d20c8d59be1"
+
+"@types/react-native@*", "@types/react-native@^0.50.7":
+  version "0.50.7"
+  resolved "http://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.50.7.tgz#4c18bb14aa08f11934f539d2b8dcb2f1a6b88bd8"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-navigation@^1.0.23":
+  version "1.0.23"
+  resolved "http://registry.npm.taobao.org/@types/react-navigation/download/@types/react-navigation-1.0.23.tgz#338e04c0f7381176899a379efbd651ddda8a2e97"
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-redux@^5.0.13":
+  version "5.0.13"
+  resolved "http://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-5.0.13.tgz#dcc67764b7455ed54422a0302fedf47e32db3579"
+  dependencies:
+    "@types/react" "*"
+    redux "^3.6.0"
+
+"@types/react@*", "@types/react@^16.0.25":
+  version "16.0.25"
+  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.0.25.tgz#bf696b83fe480c5e0eff4335ee39ebc95884a1ed"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "http://registry.npm.taobao.org/abab/download/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -4050,7 +4078,7 @@ redux-persist@^5.4.0:
   version "5.4.0"
   resolved "http://registry.npm.taobao.org/redux-persist/download/redux-persist-5.4.0.tgz#a1062313546a9d4ca6f9271464d18f736e8ca394"
 
-redux@^3.7.2:
+redux@^3.6.0, redux@^3.7.2:
   version "3.7.2"
   resolved "http://registry.npm.taobao.org/redux/download/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
   dependencies:
