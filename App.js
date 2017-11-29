@@ -12,6 +12,8 @@ import { createStore } from 'redux';
 import AppReducer from './src/reducers';
 import AppWithNavigationState from './src/navigators/AppNavigator';
 
+console.disableYellowBox = false;
+
 const store = createStore(AppReducer);
 
 const App = () => (

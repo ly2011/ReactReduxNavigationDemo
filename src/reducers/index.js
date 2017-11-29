@@ -5,11 +5,15 @@ import { AppNavigator } from '../navigators/AppNavigator';
 const firstAction = AppNavigator.router.getActionForPathAndParams('Main');
 const tempNavState = AppNavigator.router.getStateForAction(firstAction);
 const secondAction = AppNavigator.router.getActionForPathAndParams('Login');
+
+console.log(`secondAction: ${JSON.stringify(secondAction)}`);
+console.log(`tempNavState: ${JSON.stringify(tempNavState)}`);
+
 const initialNavState = AppNavigator.router.getStateForAction(
   secondAction,
   tempNavState
 );
-
+console.log(`initialNavState: ${JSON.stringify(initialNavState)}`);
 function nav(state = initialNavState, action) {
   let nextState;
   switch (action.type) {
@@ -18,6 +22,7 @@ function nav(state = initialNavState, action) {
         NavigationActions.back(),
         state
       );
+      console.log(`NavLoginState: ${JSON.stringify(nextState)}`);
       break;
     case 'Logout':
       nextState = AppNavigator.router.getStateForAction(
@@ -26,6 +31,8 @@ function nav(state = initialNavState, action) {
         }),
         state
       );
+      console.log(`NavLogoutState: ${JSON.stringify(nextState)}`);
+
       break;
     default:
       nextState = AppNavigator.router.getStateForAction(action, state);
@@ -40,8 +47,21 @@ const initialAuthState = { isLoggedIn: false };
 function auth(state = initialAuthState, action) {
   switch (action.type) {
     case 'Login':
+      console.log(
+        `AuthLoginState: ${JSON.stringify({
+          ...state,
+          isLoggedIn: true,
+        })}`
+      );
       return { ...state, isLoggedIn: true };
+
     case 'Logout':
+      console.log(
+        `AuthLogoutState: ${JSON.stringify({
+          ...state,
+          isLoggedIn: false,
+        })}`
+      );
       return { ...state, isLoggedIn: false };
     default:
       return state;

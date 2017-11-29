@@ -24,7 +24,7 @@ const LoginStatusMessage = ({ isLoggedIn, dispatch }) => {
     </View>
   );
 };
-LoginStatusMessage.prototype = {
+LoginStatusMessage.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
   dispatch: PropTypes.func.isRequired,
 };
